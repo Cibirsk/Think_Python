@@ -1,10 +1,16 @@
-   
-def repeatFunc(a,b):
-    firstFunc(a,b)
-    firstFunc(a,b)
+def do_twice(f,str):
+    f(str)
+    f(str)
 
-def firstFunc(wordA, wordB):
-    print(wordA)
-    print(wordB)
+def print_twice(bruce):
+    print(bruce)
+    print(bruce)
 
-repeatFunc("bob", "sinclar")
+
+def do_four(f,str):
+    do_twice(f,str)
+    do_twice(f,str)
+
+do_four(print_twice, 'test1')
+
+#do_twice(print_twice, "spam")
