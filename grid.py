@@ -1,3 +1,4 @@
+#faire un carré composé de 4 rangs et 4 colonnes
 def plusMoins():
     print('+ - - - - ', end=' ')
 
@@ -25,3 +26,20 @@ def doTwice(f):
 def doFour(f):
     doTwice(f)
     doTwice(f)
+
+def grandLignePleine():
+    doFour(plusMoins)
+    plusFin()
+
+def grandLigneVide():
+    doFour(baton)
+    batonFin()
+
+def firstRow(): #un rang en entier
+    grandLignePleine()
+    doFour(grandLigneVide)
+
+doFour(firstRow)
+
+
+
