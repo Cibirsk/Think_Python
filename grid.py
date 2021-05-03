@@ -1,16 +1,29 @@
-def do_twice(f,str):
-    f(str)
-    f(str)
+def plusMoins():
+    print('+ - - - - ', end=' ')
 
-def print_twice(bruce):
-    print(bruce)
-    print(bruce)
+def plusFin():
+    print('+')
 
+def baton():
+    print('|         ', end=' ')
 
-def do_four(f,str):
-    do_twice(f,str)
-    do_twice(f,str)
+def batonFin():
+    print('|')
 
-do_four(print_twice, 'test1')
+def lignePleine():
+    doTwice(plusMoins())
+    plusFin()
 
-#do_twice(print_twice, "spam")
+def ligneVide():
+    doTwice(baton())
+    batonFin()
+
+def doTwice(f):
+    f()
+    f()
+
+def doFour(f):
+    doTwice(f)
+    doTwice(f)
+
+def grid()
