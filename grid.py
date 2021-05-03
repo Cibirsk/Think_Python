@@ -11,11 +11,11 @@ def batonFin():
     print('|')
 
 def lignePleine():
-    doTwice(plusMoins())
+    doTwice(plusMoins)
     plusFin()
 
 def ligneVide():
-    doTwice(baton())
+    doTwice(baton)
     batonFin()
 
 def doTwice(f):
@@ -25,5 +25,3 @@ def doTwice(f):
 def doFour(f):
     doTwice(f)
     doTwice(f)
-
-def grid()
