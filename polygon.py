@@ -75,7 +75,7 @@ bob = turtle.Turtle()
 
 # draw a circle centered on the origin
 radius = 100
-"""
+""" permet de décaler le début du dessin penUp > décalage > penDown
 bob.pu()
 bob.fd(radius)
 bob.lt(90)
