@@ -75,10 +75,12 @@ bob = turtle.Turtle()
 
 # draw a circle centered on the origin
 radius = 100
+"""
 bob.pu()
 bob.fd(radius)
 bob.lt(90)
 bob.pd()
+"""
 circle(bob, radius)
 
 # wait for the user to close the window
