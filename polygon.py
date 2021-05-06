@@ -1,18 +1,5 @@
-from __future__ import print_function, division
-
 import math
 import turtle
-
-
-def square(t, length):
-    """Draws a square with sides of the given length.
-
-    Returns the Turtle to the starting position and location.
-    """
-    for i in range(4):
-        t.fd(length)
-        t.lt(90)
-
 
 def polyline(t, n, length, angle):
     """Draws n line segments.
@@ -25,18 +12,6 @@ def polyline(t, n, length, angle):
     for i in range(n):
         t.fd(length)
         t.lt(angle)
-
-
-def polygon(t, n, length):
-    """Draws a polygon with n sides.
-
-    t: Turtle
-    n: number of sides
-    length: length of each side.
-    """
-    angle = 360.0/n
-    polyline(t, n, length, angle)
-
 
 def arc(t, r, angle):
     """Draws an arc with the given radius and angle.
@@ -56,43 +31,20 @@ def arc(t, r, angle):
     polyline(t, n, step_length, step_angle)
     t.rt(step_angle/2)
 
-
-def circle(t, r):
-    """Draws a circle with the given radius.
-
-    t: Turtle
-    r: radius
-    """
-    arc(t, r, 360)
-
 def petale(t,r):
     arc(t,r,90)
     bob.lt(90)
     arc(t,r,90)
 
 def flower(t,r):
-    for i in range(8):
+    for i in range(16):
         petale(t,r)
-        bob.lt(45)
-        petale(t,r)
+        bob.lt(360/16)
 
-# the following condition checks whether we are
-# running as a script, in which case run the test code,
-# or being imported, in which case don't.
+bob = turtle.Turtle() #import module dans bob
 
-#if __name__ == '__main__':
-bob = turtle.Turtle()
+radius = 100 #longueur de l'arc
 
-# draw a circle centered on the origin
-radius = 100
-
-"""
-bob.pu()
-bob.fd(radius)
-bob.lt(90)
-bob.pd()
-"""
-#circle(bob, radius)
 
 flower(bob,radius)
 
