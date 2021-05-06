@@ -65,6 +65,9 @@ def circle(t, r):
     """
     arc(t, r, 360)
 
+def flower(t,r,angle):
+    arc(t,r,180)
+
 
 # the following condition checks whether we are
 # running as a script, in which case run the test code,
@@ -75,13 +78,13 @@ bob = turtle.Turtle()
 
 # draw a circle centered on the origin
 radius = 100
-""" permet de décaler le début du dessin penUp > décalage > penDown
 bob.pu()
 bob.fd(radius)
 bob.lt(90)
 bob.pd()
-"""
-circle(bob, radius)
+#circle(bob, radius)
+
+flower(bob,radius,360/3)
 
 # wait for the user to close the window
 turtle.mainloop()
