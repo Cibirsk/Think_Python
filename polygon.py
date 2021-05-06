@@ -41,19 +41,29 @@ def flower(t,r):
         petale(t,r)
         bob.lt(360/16)
 
-def triangle(t):
+def triangle_equi(t):
     t.lt(60/2)
-    for i in range(3):
+    for j in range (6):
+        for i in range(3):
+            t.fd(100)
+            t.lt(120)
+
+        t.lt(60)
+
+def triangle_iso(t):
+    for j in range(7):
         t.fd(100)
-        t.lt(120)
-
-
+        t.lt(180-64.285)
+        t.fd(86.779)
+        t.lt(180-64.285)
+        t.fd(100)
+        t.lt(180)
 
 bob = turtle.Turtle() #import module dans bob
 
 radius = 100 #longueur de l'arc
 
-triangle(bob)
+triangle_iso(bob)
 #flower(bob,radius)
 
 # wait for the user to close the window
