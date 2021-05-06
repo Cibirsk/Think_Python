@@ -65,9 +65,16 @@ def circle(t, r):
     """
     arc(t, r, 360)
 
-def flower(t,r,angle):
-    arc(t,r,180)
+def petale(t,r):
+    arc(t,r,90)
+    bob.lt(90)
+    arc(t,r,90)
 
+def flower(t,r):
+    for i in range(8):
+        petale(t,r)
+        bob.lt(45)
+        petale(t,r)
 
 # the following condition checks whether we are
 # running as a script, in which case run the test code,
@@ -78,13 +85,16 @@ bob = turtle.Turtle()
 
 # draw a circle centered on the origin
 radius = 100
+
+"""
 bob.pu()
 bob.fd(radius)
 bob.lt(90)
 bob.pd()
+"""
 #circle(bob, radius)
 
-flower(bob,radius,360/3)
+flower(bob,radius)
 
 # wait for the user to close the window
 turtle.mainloop()
