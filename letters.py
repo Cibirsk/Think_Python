@@ -35,5 +35,37 @@ bob = turtle.Turtle() #import module dans bob
 
 radius = 100 #longueur de l'arc
 
+def draw_a(t):
+    t.lt(60)
+    t.fd(100)
+    t.rt(120)
+    t.fd(100)
+    t.lt(180)
+    t.fd(50)
+    t.lt(60)
+    t.fd(50)
+
+def draw_b(t):
+    t.lt(90)
+    t.fd(100)
+    t.bk(100)
+    t.rt(90)
+    arc(t,25,180)
+    t.rt(180)
+    arc(t,25,180)
+
+def draw_c(t):
+    arc(t,100,20)
+    t.up()
+    arc(t,100,140)
+    t.down()
+    arc(t,100,200)
+
+def spirale(t):
+    
+
+
+spirale(bob)
+
 # wait for the user to close the window
 turtle.mainloop()
