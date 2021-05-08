@@ -5,4 +5,12 @@ def countdown(n):
         print(n)
         countdown(n-1)
 
-countdown(5)
+def print_s(s,n):
+    if n<=0:
+        return
+    else:
+        print(s  + ' ' + str(n))
+        print_s(s,n-1)
+
+n=int(input("type a number: "))
+print_s('top',n)
