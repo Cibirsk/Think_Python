@@ -1,8 +1,14 @@
 import time
 t=time.time()
 
-#nbrAn= t//(60*60*24*365)
+
+nbrHeur=t//3600
+nbrMin=(t%60)//60
+nbrSec=t%3600
+
 nbrJour= t//(3600*24)
 
-#print(int(nbrAn))
-print(int(nbrJour))
+print('heures: ' + str(nbrHeur))
+print('minutes: ' + str(nbrMin))
+print('secondes: ' + str(nbrSec))
+print('jours depuis epoch: ' + str(int(nbrJour)))

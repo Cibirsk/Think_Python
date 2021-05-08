@@ -1,24 +1,16 @@
-import time
-# time.time() return the time in seconds since the epoch as a floating point number
+import turtle
 
-def chour(t):
-	hour = t / 3600
-	print("The number of hours has passed since epoch is %f" % hour)
+def draw(t, length, n):
+	if n == 0:
+		return
+	angle = 50
+	t.fd(length*n)
+	t.lt(angle)
+	draw(t, length, n-1)
+	t.rt(2*angle)
+	draw(t, length, n-1)
+	t.lt(angle)
+	t.bk(length*n)
 
-def cminute(t):
-	minute = t / 60
-	print("The number of minutes has passed since epoch is %f" % minute)
-	
-def cseconds(t):
-	seconds = t
-	print("The number of seconds has passed since epoch is %f" % seconds)
-	
-def num_day():
-	sec = time.time()
-	num_day = sec / (60*60*24)
-	print("The number of days has passed since epoch is %f" % num_day)
-
-num_day()
-chour(time.time())
-cminute(time.time())
-cseconds(time.time())
+bob = turtle.Turtle() #import module dans bob
+draw(bob, 3,5)
