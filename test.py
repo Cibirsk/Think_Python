@@ -13,4 +13,5 @@ def draw(t, length, n):
 	t.bk(length*n)
 
 bob = turtle.Turtle() #import module dans bob
-draw(bob, 3,5)
+draw(bob, 20,4)
+turtle.mainloop()
