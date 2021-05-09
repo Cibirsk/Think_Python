@@ -1,17 +1,24 @@
-import turtle
-
-def draw(t, length, n):
+def factoriel(n):
 	if n == 0:
-		return
-	angle = 50
-	t.fd(length*n)
-	t.lt(angle)
-	draw(t, length, n-1)
-	t.rt(2*angle)
-	draw(t, length, n-1)
-	t.lt(angle)
-	t.bk(length*n)
+		return 1
+	else:
+		return n*factoriel(n-1)
 
-bob = turtle.Turtle() #import module dans bob
-draw(bob, 20,4)
-turtle.mainloop()
+#print(factoriel(5))
+
+
+def fibonacci(n):
+	if n<=1:
+		return n
+	else:
+		return fibonacci(n-1)+fibonacci(n-2)
+
+#print(fibonacci(6))
+
+def count_down(number):
+  if number <= 0:
+    return
+  print(number)
+  count_down(number - 1)
+
+count_down(4)

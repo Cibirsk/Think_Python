@@ -15,5 +15,5 @@ def koch(t, n):
     koch(t, n)
 
 bob = turtle.Turtle() #import module dans bob
-koch(bob, 200)
+koch(bob, 100)
 turtle.mainloop()

@@ -1,17 +1,17 @@
 import turtle
 
-def Koch(  n, cote  ) :
+def courbeVonKoch(t,n,cote) :
 	if n == 0 :
-		tl.forward(cote)
+		t.forward(cote)
 	else :
-		courbeVonKoch(n-1, cote/3)
-		tl.left(60)
-		courbeVonKoch(n-1, cote/3)
-		tl.left(-120)
-		courbeVonKoch(n-1, cote/3)
-		tl.left(60)
-		courbeVonKoch(n-1, cote/3)
+		courbeVonKoch(t, n-1, cote/3)
+		t.left(60)
+		courbeVonKoch(t, n-1, cote/3)
+		t.left(-120)
+		courbeVonKoch(t, n-1, cote/3)
+		t.left(60)
+		courbeVonKoch(t, n-1, cote/3)
 
 bob = turtle.Turtle() #import module dans bob
-koch(bob, 200)
+courbeVonKoch(bob, 2, 200)
 turtle.mainloop()
