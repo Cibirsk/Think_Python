@@ -13,5 +13,5 @@ def courbeVonKoch(t,n,cote) :
 		courbeVonKoch(t, n-1, cote/3)
 
 bob = turtle.Turtle() #import module dans bob
-courbeVonKoch(bob, 2, 200)
+courbeVonKoch(bob, 2, 100)
 turtle.mainloop()
