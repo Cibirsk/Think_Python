@@ -21,4 +21,4 @@ def count_down(number):
   print(number)
   count_down(number - 1)
 
-print(fibonacci(4))
+print(fibonacci(5))
