@@ -1,12 +1,9 @@
-def first(word):
-    return word[0]
+def isPalindrome(word):
+    for i in range(len (word)):
+        if word[i] == word[len(word)-1-i]:
+            return True
+        else:
+            return False
 
-def last(word):
-    return word[-1]
 
-def middle(word):
-    return word[1:-1]
-
-#def isPalindrome(word):
-
-print(first('aze'))
+print(isPalindrome('noon'))
