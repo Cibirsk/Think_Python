@@ -1,42 +1,17 @@
-def naturalNumb(a,b):
-    if a>b:
-        return
+def facto(n):
+    result=0
+    for i in range(n,1,-1):
+        print(n)
+        result=result + (n * (n-1))
+    return result
+
+
+def factorielle(n):
+    if n==0:
+        return 1
     else:
-        print(a)
-        naturalNumb(a+1,b)
+        return n*factorielle(n-1)
 
-#naturalNumb(3,10)
 
-def printNaturalNumbers(lowerRange, upperRange) :
-	if lowerRange <= upperRange :
-	  print(lowerRange)
-	  lowerRange += 1
-	  helperFunction(lowerRange, upperRange)
-	else :
-		return
-
-def helperFunction(lowerRange, upperRange) :
-  if lowerRange <= upperRange :
-    print(lowerRange)
-    lowerRange += 1
-    printNaturalNumbers(lowerRange, upperRange)
-  else :
-      return
-
-# Driver Program 
-n = 5
-#printNaturalNumbers(1, n)
-
-def printPattern(targetNumber) :
-  
-  if (targetNumber <= 0) :
-    print(targetNumber)
-    return
-
-  print(targetNumber)
-  printPattern(targetNumber - 5)
-  print(targetNumber)
-
-# Driver Program 
-n = 10
-printPattern(n)
+print('iteration: ' + str(facto(4)))
+print('recursive: ' + str(factorielle(4)))
