@@ -1,3 +1,4 @@
+#iterative version
 def iteReverse(string):
     result=''
     longueur= len(string)-1
@@ -6,7 +7,7 @@ def iteReverse(string):
         longueur -= 1
     return result
 
-        
+#recursive version
 def reverseString(string):
     # Base Case
     if len(string) == 0:
