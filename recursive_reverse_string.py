@@ -6,14 +6,6 @@ def iteReverse(string):
         longueur -= 1
     return result
 
-a='tap'
-#print(iteReverse(a))
-
-def recuReverse(string):
-    if len(string) == 0:
-        return string[longueur]
-    else:
-        return recuReverse(string[longueur-1])
         
 def reverseString(string):
     # Base Case
@@ -24,4 +16,4 @@ def reverseString(string):
     else:
         return reverseString(string[1:]) + string[0]
 
-print(reverseString('tapir'))
+print(reverseString('abcde'))
