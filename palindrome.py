@@ -1,3 +1,4 @@
+#itérative function
 def isPalindrome(word):
     for i in range(len (word)):
         if word[i] == word[len(word)-1-i]:
@@ -6,4 +7,11 @@ def isPalindrome(word):
             return False
 
 
-print(isPalindrome('noon'))
+#recursive function
+def palindrome(word):
+    if word[0]== word[-1]:
+        return True
+
+
+#print(isPalindrome('noon'))
+print(palindrome('noonx'))
