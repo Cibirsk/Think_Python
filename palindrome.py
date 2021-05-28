@@ -10,8 +10,11 @@ def isPalindrome(word):
 #recursive function
 def palindrome(word):
     if word[0]== word[-1]:
-        return True
-
+        return palindrome(word[1:-1])
+    else:
+        return False
 
 #print(isPalindrome('noon'))
-print(palindrome('noonx'))
+#print(palindrome('noon'))
+word='abcd'
+print(word[1:-1])
