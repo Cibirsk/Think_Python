@@ -29,8 +29,8 @@ def use_all(letters_list):
         for letter in letters_list:
             if letter in line:
                 countWord +=1
-                break
-                
+            else:
+                countWord -=1
     return countWord
 
 print(use_all('ir'))
