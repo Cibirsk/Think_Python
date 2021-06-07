@@ -12,14 +12,12 @@ def avoid():
     return countWord
 
 #returns True if the word contains only letters in the list
-def useOnly(word, lettersList):
-    response=False
+def useOnly(word, letterList):
     for letter in word:
-        if letter in lettersList:
-            response=True
-        else:
-            response=False
-    return response
+        if letter not in letterList:
+            return False
+    return True
+
 
 #returns True if the word uses all the required letters at least once
 def use_all(letters_list):
@@ -40,7 +38,11 @@ def use_all(letters_list):
 #returns True if the letters in a word appear in alphabetical order (double letters are ok)
 def is_abecedarian(word):
     temp_word= word[1:]
-    for letter in word:
-        if letter < 
-
-print(is_abecedarian('bgr'))
+    response=True
+    for w,t in zip(word, temp_word):
+        if w <= t :
+            response= True 
+        else:
+            response= False
+            break
+    return response
