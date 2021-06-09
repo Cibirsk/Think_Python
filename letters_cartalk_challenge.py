@@ -4,6 +4,7 @@ def readFile():
     for word in fin:
         cartalk1(word)
 
+"""
 def cartalk1(word):
         i=0
         theWord= word
@@ -12,7 +13,15 @@ def cartalk1(word):
                 print(theWord)
             else:
                 theWord = theWord[i+1:]
-                print(theWord)
             i +=1
+"""
+def cartalk1(word):
+    theWord =word
+    for i in theWord:
+        if i==i+1 and i+2==i+3 and i+4==i+5:
+            print(theWord)
+        else:
+            #theWord = theWord[i+1:]
+            break
 
 readFile()
