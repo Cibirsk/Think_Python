@@ -1,22 +1,21 @@
 #itérative function
-def palindromeIte(word):
-    for i in range(len (word)):
-        if word[i] == word[len(word)-1-i]:
-            return True
-        else:
+def palindromeIter(word):
+    for i in range(int(len(word)/2)):
+        if word[i] != word[len(word)-1-i]:
             return False
 
+    return True
 
 #recursive function
-def palindromeRecu(word):
+def palindromeRecur(word):
     if len(word)==0:
         return True
     elif word[0]==word[-1]:
-        return palindrome(word[1:-1])
+        return palindromeRecur(word[1:-1])
     else:
         return False
 
-print(palindromeRecu('abcdtdcba'))
+print(palindromeRecur('abcdtdcba'))
 
 
 #version corrigé du livre

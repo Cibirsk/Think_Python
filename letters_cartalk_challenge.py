@@ -18,12 +18,10 @@ def cartalk1():
 #def cartalk2():
 
 def isPalindromic(word):
-    response=False
-    for i in range(len(word)):
-        if word[i] == word[len(word)-1-i]:
-            response=True
-        else:
-            response=False
-    return response
+    for i in range(int(len(word)/2)):
+        if word[i] != word[len(word)-1-i]:
+            return False
 
-print(isPalindromic('azerta'))
+    return True
+
+print(isPalindromic('azetreza'))
