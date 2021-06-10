@@ -1,8 +1,7 @@
 abcdefghij
-klmnopqrst
-uvwxyzabcd
 aabbccdd
-abcdefghij
-klmnopqrst
-eeffgghhii
-attuubbeegg
+eeffgghh
+abttuubbeeaf
+abc
+aabbcc
+a
