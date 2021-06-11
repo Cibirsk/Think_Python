@@ -15,8 +15,6 @@ def cartalk1():
 # 3)  +1  4 au the middle of 6 are palindromic
 # 4)  +1  6 palindromic 
 
-#def cartalk2():
-
 def isPalindromic(word):
     for i in range(int(len(word)/2)):
         if word[i] != word[len(word)-1-i]:
@@ -24,4 +22,28 @@ def isPalindromic(word):
 
     return True
 
-print(isPalindromic('azetreza'))
+def cartalk2():
+    for i in range(100000,1000000):
+        km4Last=str(i)
+        km5Last=str(i+1)
+        km4Middle=str(i+2)
+        km6=str(i+3)
+
+        if isPalindromic(km4Last[2:]) and isPalindromic(km5Last[1:]) and isPalindromic(km4Middle[1:-1]) and isPalindromic(km6):
+            print()
+            print('Ce nombre respecte les conditions:')
+            print('km4Last:   ' + km4Last)
+            print('km5Last:   ' + km5Last)
+            print('km4Middle: ' + km4Middle)
+            print('km6:       ' + km6)
+
+#def cartalk3():
+def reverse(numb):
+    reverseNumb=''
+    reverseNumb +=numb[1:]
+    reverseNumb +=numb[:1]
+    return reverseNumb
+
+print(reverse(str(12)))
+
+
