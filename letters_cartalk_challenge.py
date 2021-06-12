@@ -22,6 +22,16 @@ def isPalindromic(word):
 
     return True
 
+#“I was driving on the highway the other day and I happened to notice my odometer.
+#Like most odometers, it shows six digits, in whole miles only. So, if my car had 300,000
+#miles, for example, I’d see 3-0-0-0-0-0.
+#“Now, what I saw that day was very interesting. I noticed that the last 4 digits were
+#palindromic; that is, they read the same forward as backward. For example, 5-4-4-5 is a
+#palindrome, so my odometer could have read 3-1-5-4-4-5.
+#“One mile later, the last 5 numbers were palindromic. For example, it could have read
+#3-6-5-4-5-6. One mile after that, the middle 4 out of 6 numbers were palindromic. And
+#you ready for this? One mile later, all 6 were palindromic!
+#“The question is, what was on the odometer when I first looked?”
 def cartalk2():
     for i in range(100000,1000000):
         km4Last=str(i)
@@ -37,12 +47,22 @@ def cartalk2():
             print('km4Middle: ' + km4Middle)
             print('km6:       ' + km6)
 
+#“Recently I had a visit with my mom and we realized that the two digits that make
+#up my age when reversed resulted in her age. For example, if she’s 73, I’m 37. We
+#wondered how often this has happened over the years but we got sidetracked with other
+#topics and we never came up with an answer.
+#“When I got home I figured out that the digits of our ages have been reversible six times
+#so far. I also figured out that if we’re lucky it would happen again in a few years, and
+#if we’re really lucky it would happen one more time after that. In other words, it would
+#have happened 8 times over all. So the question is, how old am I now?”
+#Write a Python program that searches for solutions to this Puzzler. Hint: you might find the string
+#method zfill useful.
 def reverse(numb):
     reverseNumb=''
     reverseNumb +=numb[1:]
     reverseNumb +=numb[:1]
     return reverseNumb
-
+#zfill rempli de 0 pour avoir un nombre à 2 chiffre si inférieur à 10 (ex: 05)
 def cartalk3():
     for mother in range(36,99):
         for son in range(18,99):
@@ -50,9 +70,5 @@ def cartalk3():
                 print(str(son).zfill(2) + '  ' + str(mother).zfill(2))
 
 cartalk3()
-
-
-
-
 
 
