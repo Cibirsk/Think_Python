@@ -37,13 +37,22 @@ def cartalk2():
             print('km4Middle: ' + km4Middle)
             print('km6:       ' + km6)
 
-#def cartalk3():
 def reverse(numb):
     reverseNumb=''
     reverseNumb +=numb[1:]
     reverseNumb +=numb[:1]
     return reverseNumb
 
-print(reverse(str(12)))
+def cartalk3():
+    for mother in range(36,99):
+        for son in range(18,99):
+            if reverse(str(son).zfill(2)) == str(mother).zfill(2) and (mother-son)>18 and (mother-son)<37:
+                print(str(son).zfill(2) + '  ' + str(mother).zfill(2))
+
+cartalk3()
+
+
+
+
 
 
