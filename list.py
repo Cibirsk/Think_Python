@@ -6,4 +6,12 @@ the elements from all of the nested lists. For example:
 21
 """
 t = [[1, 2], [3], [4, 5, 6]]
-print(t)
+
+def nested_sum(myList):
+    mySum=0
+    for t1 in myList:
+        for t2 in t1:
+            mySum += t2
+    return mySum
+
+print(nested_sum(t))
