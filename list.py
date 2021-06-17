@@ -14,4 +14,28 @@ def nested_sum(myList):
             mySum += t2
     return mySum
 
-print(nested_sum(t))
+
+"""
+Write a function called cumsum that takes a list of numbers and returns the cumulative
+sum; that is, a new list where the ith element is the sum of the first i + 1 elements from the
+original list. For example:
+>>> t = [1, 2, 3]
+>>> cumsum(t)
+[1, 3, 6]
+"""
+def cumsum(myList):
+    result=[]
+    for i in range(len(myList)):
+       result.append((sum(myList[0:i+1])))
+    return result    
+
+
+"""
+Write a function called middle that takes a list and returns a new list that contains
+all but the first and last elements. For example:
+>>> t = [1, 2, 3, 4]
+>>> middle(t)
+[2, 3]
+"""
+def middle(myList):
+    return myList[1:-1]
