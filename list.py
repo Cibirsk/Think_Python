@@ -39,3 +39,36 @@ all but the first and last elements. For example:
 """
 def middle(myList):
     return myList[1:-1]
+
+
+"""
+Write a function called chop that takes a list, modifies it by removing the first and
+last elements, and returns None. For example:
+>>> t = [1, 2, 3, 4]
+>>> chop(t)
+>>> t
+[2, 3]
+"""
+def chop(myList):
+    global t #créé t en tant que variable globale
+    myList=myList[1:-1]
+    t=myList
+
+"""
+Write a function called is_sorted that takes a list as a parameter and returns True
+if the list is sorted in ascending order and False otherwise. For example:
+>>> is_sorted([1, 2, 2])
+True
+>>> is_sorted(['b', 'a'])
+False
+"""
+
+def is_sorted(myList):
+    tempList=myList
+    tempList.sort()
+    if tempList==myList:
+        return True
+    else:
+        return False
+
+print(is_sorted(['c','b','a']))
