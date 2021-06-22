@@ -72,6 +72,7 @@ def is_sorted(myList):
     else:
         return False
 
+
 """
 Two words are anagrams if you can rearrange the letters from one to spell the other.
 Write a function called is_anagram that takes two strings and returns True if they are anagrams.
@@ -83,3 +84,31 @@ def is_anagram(firStr,secStr):
         if i not in secStr:
             return False
     return True
+
+
+"""
+Write a function called has_duplicates that takes a list and returns True if there
+is any element that appears more than once. It should not modify the original list.
+"""
+def has_duplicates(myList):
+    tempList=[]
+    for i in myList:
+        if i not in tempList:
+            tempList.append(i)
+        else:
+            return False
+    return True
+
+
+"""
+This exercise pertains to the so-called Birthday Paradox, which you can read about
+at http: // en. wikipedia. org/ wiki/ Birthday_ paradox .
+If there are 23 students in your class, what are the chances that two of you have the same birthday?
+You can estimate this probability by generating random samples of 23 birthdays and checking for
+matches. Hint: you can generate random birthdays with the randint function in the random
+module.
+You can download my solution from http: // thinkpython2. com/ code/ birthday. py .
+"""
+
+import random
+print(random.randint(0,10))
