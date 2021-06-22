@@ -72,4 +72,14 @@ def is_sorted(myList):
     else:
         return False
 
-print(is_sorted(['a','b','c']))
+"""
+Two words are anagrams if you can rearrange the letters from one to spell the other.
+Write a function called is_anagram that takes two strings and returns True if they are anagrams.
+"""
+def is_anagram(firStr,secStr):
+    if len(firStr) != len(secStr):
+        return False
+    for i in firStr:
+        if i not in secStr:
+            return False
+    return True
