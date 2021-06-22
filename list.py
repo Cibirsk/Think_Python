@@ -64,11 +64,12 @@ False
 """
 
 def is_sorted(myList):
-    tempList=myList
-    tempList.sort()
+    tempList=[]
+    tempList.extend(myList)
+    myList.sort()
     if tempList==myList:
         return True
     else:
         return False
 
-print(is_sorted(['c','b','a']))
+print(is_sorted(['a','b','c']))
