@@ -110,5 +110,30 @@ module.
 You can download my solution from http: // thinkpython2. com/ code/ birthday. py .
 """
 
-import random
-print(random.randint(0,10))
+def birthday_paradox():
+    import random
+    j=1
+    tauxPositif=0
+    while j<10000:
+
+        birth_list=[]
+        same_date=0
+        i=1
+        while i <= 23:
+            date=random.randint(1,365)
+
+            if date in birth_list:
+                same_date +=1
+                #print(date)
+            birth_list.append(date)
+
+            i +=1
+
+        if same_date > 0:
+            tauxPositif +=1
+        j +=1
+
+    pourCentTaux= (tauxPositif/10000)*100
+    print(pourCentTaux)
+
+birthday_paradox()
