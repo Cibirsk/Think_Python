@@ -147,7 +147,9 @@ def wordList():
     for word in fin:
         for i in word[0:1]:
             theList.append(i)
+            #theList=theList + [i]   traitement beaucoup plus long
     print(theList)
 
 wordList()
+
 

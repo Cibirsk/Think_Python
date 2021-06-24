@@ -1,7 +1,4 @@
-abcdefghij
-aabbccdd
-eeffgghh
-abttuubbeeaf
-abc
-aabbcc
-a
+lapin
+chat
+rat
+vache
