@@ -117,23 +117,37 @@ def birthday_paradox():
     while j<10000:
 
         birth_list=[]
-        same_date=0
+        same_date=0 #stocke les cas avec 2 dates identiques
         i=1
         while i <= 23:
             date=random.randint(1,365)
 
             if date in birth_list:
                 same_date +=1
-                #print(date)
             birth_list.append(date)
 
             i +=1
 
         if same_date > 0:
-            tauxPositif +=1
+            tauxPositif +=1 #additionne le nombre de cas avec date identique sur l'ensemble des essais
         j +=1
 
     pourCentTaux= (tauxPositif/10000)*100
     print(pourCentTaux)
 
-birthday_paradox()
+"""
+Write a function that reads the file words.txt and builds a list with one element
+per word. Write two versions of this function, one using the append method and the other using
+the idiom t = t + [x]. Which one takes longer to run? Why?
+Solution: http: // thinkpython2. com/ code/ wordlist. py .
+"""
+def wordList():
+    theList=[]
+    fin = open('words.txt') #open the file
+    for word in fin:
+        for i in word[0:1]:
+            theList.append(i)
+    print(theList)
+
+wordList()
+
