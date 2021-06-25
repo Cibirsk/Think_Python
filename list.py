@@ -150,6 +150,5 @@ def wordList():
             #theList=theList + [i]   traitement beaucoup plus long
     print(theList)
 
-wordList()
 
 
