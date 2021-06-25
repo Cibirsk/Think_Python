@@ -2,3 +2,9 @@ lapin
 chat
 rat
 vache
+cheval
+poule
+chien
+autruche
+loriot
+mouche
