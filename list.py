@@ -172,7 +172,14 @@ def makeList():
         theList.append(word.strip())
     return theList
 
-def bisectList(t,word):
+def bisectList(myList,word):
+   cutHalf=len(t)/2
+   t=myList
+   while cutHalf > 2:
+       if word==t[cutHalf]:
+           return True
+       elif word < t[cutHalf -1]:
+            cutHalf=cutHalf/2
     
 
 bisectList(makeList())
