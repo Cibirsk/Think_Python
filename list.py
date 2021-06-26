@@ -177,7 +177,16 @@ def bisectList(t,word):
     if t[0] == word:
         return True
     if word < t[int(len(t)/2)]:
+        print(int(len(t)/2))
+        print(t[int(len(t)/2)])
         bisectList(t[0:int(len(t)/2)],word)
+
+    if word > t[int(len(t)/2)]:
+        print(int(len(t)/2))
+        print(t[int(len(t)/2)])
+        bisectList(t[int(len(t)/2):-1],word)
+
+
     return False
     
     
