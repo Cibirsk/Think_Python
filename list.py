@@ -172,14 +172,14 @@ def makeList():
         theList.append(word.strip())
     return theList
 
-def bisectList(myList,word):
-   cutHalf=len(t)/2
-   t=myList
-   while cutHalf > 2:
-       if word==t[cutHalf]:
-           return True
-       elif word < t[cutHalf -1]:
-            cutHalf=cutHalf/2
+def bisectList(t,word):
+    print(t)
+    if t[0] == word:
+        return True
+    if word < t[int(len(t)/2)]:
+        bisectList(t[0:int(len(t)/2)],word)
+    return False
+    
     
 
-bisectList(makeList())
+print(bisectList(makeList(),'cheval'))
