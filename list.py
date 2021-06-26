@@ -169,9 +169,10 @@ def makeList():
     theList=[]
     fin = open('words2.txt')
     for word in fin:
-        theList.append(word)
+        theList.append(word.strip())
     return theList
 
-#def bisectList():
-print(makeList())
+def bisectList(t,word):
+    
 
+bisectList(makeList())
