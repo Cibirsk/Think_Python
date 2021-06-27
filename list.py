@@ -189,7 +189,7 @@ def in_bisect(word_list, word):
 
 def bisectList(t,word):
     print(t)
-    if t[int(len(t)/2)] == word:
+    if t[int(len(t)//2)] == word:
         return True
     if word < t[int(len(t)/2)]:
         print(t[int(len(t)/2)])
