@@ -172,23 +172,35 @@ def makeList():
         theList.append(word.strip())
     return theList
 
+def in_bisect(word_list, word):
+    if len(word_list) == 0:
+        return False
+
+    i = len(word_list) // 2
+    if word_list[i] == word:
+        return True
+
+    if word_list[i] > word:
+        # search the first half
+        return in_bisect(word_list[:i], word)
+    else:
+        # search the second half
+        return in_bisect(word_list[i+1:], word)
+
 def bisectList(t,word):
     print(t)
-    if t[0] == word:
+    if t[int(len(t)/2)] == word:
         return True
     if word < t[int(len(t)/2)]:
-        print(int(len(t)/2))
         print(t[int(len(t)/2)])
-        bisectList(t[0:int(len(t)/2)],word)
+        return bisectList(t[0:int(len(t)/2)+1],word)
 
     if word > t[int(len(t)/2)]:
-        print(int(len(t)/2))
         print(t[int(len(t)/2)])
-        bisectList(t[int(len(t)/2):-1],word)
-
+        return bisectList(t[int(len(t)/2):-1],word)
 
     return False
     
     
 
-print(bisectList(makeList(),'cheval'))
+print(in_bisect(makeList(),'chien'))
