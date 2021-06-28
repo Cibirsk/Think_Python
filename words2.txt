@@ -1,12 +1,6 @@
 aigle
-autruche
-chat
-cheval
-chien
-corbeau
 lapin
-loriot
-mouche
-poule
-rat
-vache
+azer
+chien
+reza
+cheval

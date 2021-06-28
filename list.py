@@ -176,7 +176,7 @@ def in_bisect(word_list, word):
     if len(word_list) == 0:
         return False
 
-    i = len(word_list) // 2
+    i = len(word_list) // 2   #  // renvoie entier inférieur 11/3 = 3.66   11//3 = 3
     if word_list[i] == word:
         return True
 
@@ -187,20 +187,36 @@ def in_bisect(word_list, word):
         # search the second half
         return in_bisect(word_list[i+1:], word)
 
-def bisectList(t,word):
-    print(t)
-    if t[int(len(t)//2)] == word:
+"""
+Two words are a “reverse pair” if each is the reverse of the other. Write a program
+that finds all the reverse pairs in the word list. Solution: http: // thinkpython2. com/ code/
+reverse_ pair. py .
+"""
+def is_reverse(word1,word2):
+    a=list(word1)
+    b=list(word2)
+    list.reverse(b)
+    if a == b:
         return True
-    if word < t[int(len(t)/2)]:
-        print(t[int(len(t)/2)])
-        return bisectList(t[0:int(len(t)/2)+1],word)
+    else:
+        return False
 
-    if word > t[int(len(t)/2)]:
-        print(t[int(len(t)/2)])
-        return bisectList(t[int(len(t)/2):-1],word)
-
-    return False
+def reverse_pair():
+    theList=[]
+    nonRevList=[]
+    revList=[]
+    fin=open('words2.txt')
+    for word in fin:
+        theList.append(word.strip())
     
+    for i in range(len(theList)):
+        for j in range(len(theList[1:])):
+            if is_reverse(i,j):
+                nonRevList.append(i)
+                revList.append(j)
     
+    print(nonRevList)
+    print(revList)
 
-print(in_bisect(makeList(),'chien'))
+reverse_pair()
+    
