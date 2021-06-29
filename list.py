@@ -217,6 +217,3 @@ def reverse_pair():
     
     print(nonRevList)
     print(revList)
-
-reverse_pair()
-    
