@@ -203,17 +203,16 @@ def is_reverse(word1,word2):
 
 def reverse_pair():
     theList=[]
-    nonRevList=[]
     revList=[]
     fin=open('words2.txt')
+
     for word in fin:
         theList.append(word.strip())
-    
-    for i in range(len(theList)):
-        for j in range(len(theList[1:])):
+
+    for i in theList:
+        for j in theList[1:]:
             if is_reverse(i,j):
-                nonRevList.append(i)
                 revList.append(j)
-    
-    print(nonRevList)
-    print(revList)
+
+    print(revList) 
+
