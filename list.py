@@ -215,4 +215,3 @@ def reverse_pair():
                 revList.append(j)
 
     print(revList) 
-
