@@ -8,4 +8,10 @@ def checkString(s):
                         listLetters[c] +=1
         return listLetters
 
-print(checkString('bateau'))
+def checkString2(s):
+        listLetters={}
+        for c in s:
+
+
+h=checkString('bateau')
+print(h.get('v',0))
