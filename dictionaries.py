@@ -1,5 +1,11 @@
-myCar={'marque':'Aston',
-        'année':1964,
-        'modèle':'DB7'}
-print(myCar['marque'])
-print(len(myCar))
+#compte le nombre de fois qu'une lettre apparait dans 1 string
+def checkString(s):
+        listLetters={}
+        for c in s:
+                if c not in listLetters:
+                        listLetters[c]=1
+                else:
+                        listLetters[c] +=1
+        return listLetters
+
+print(checkString('bateau'))
