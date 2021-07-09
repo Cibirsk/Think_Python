@@ -11,7 +11,11 @@ def checkString(s):
 def checkString2(s):
         listLetters={}
         for c in s:
+                a=listLetters.get
 
 
-h=checkString('bateau')
-print(h.get('v',0))
+
+g={'marque':'aston',
+'modèle':'DB7',
+'année':1967}
+print(g.get('modèle','none'))
