@@ -8,14 +8,26 @@ def checkString(s):
                         listLetters[c] +=1
         return listLetters
 
-def checkString2(s):
-        listLetters={}
-        for c in s:
-                a=listLetters.get
-
-
 
 g={'marque':'aston',
 'modèle':'DB7',
-'année':1967}
-print(g.get('modèle','none'))
+'année':1967,
+'mon année':1967}
+
+def dicoLoop(h):
+        for c in h:
+                print(c,h[c])
+        for c in h:
+                print(c)
+
+def invert_dict(d):
+        inverse = {}
+        for key in d:
+                val = d[key]
+                if val not in inverse:
+                        inverse[val] = [key]
+                else:
+                        inverse[val].append(key)
+        return inverse
+
+print(invert_dict(g))
