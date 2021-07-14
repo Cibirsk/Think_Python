@@ -30,4 +30,29 @@ def invert_dict(d):
                         inverse[val].append(key)
         return inverse
 
-print(invert_dict(g))
+
+known = {0:0, 1:1}
+def fibonacci(n):
+        if n in known:
+                return known[n]
+        res = fibonacci(n-1) + fibonacci(n-2)
+        known[n] = res
+        return res
+
+
+"""
+Write a function that reads the words in words.txt and stores them as keys in a
+dictionary. It doesn’t matter what the values are. Then you can use the in operator as a fast way to
+check whether a string is in the dictionary.
+"""
+def checkDico(w):
+        fin=open('words2.txt')
+        myDico={}
+        for word in fin:
+                myDico[word.strip()]=''
+        if w in myDico:
+                return True
+        else:
+                return False
+
+print(checkDico('chevale'))
