@@ -14,6 +14,8 @@ myCar={'marque':'aston',
 'année':1964,
 'couleur':'grey'}
 
+myCar['grey'].append('OK')
+print(myCar)
 
 def dicoLoop(h):
         for c in h:
