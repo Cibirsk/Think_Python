@@ -9,10 +9,11 @@ def checkString(s):
         return listLetters
 
 
-g={'marque':'aston',
-'modèle':'DB7',
-'année':1967,
-'mon année':1967}
+myCar={'marque':'aston',
+'modèle':'DB5',
+'année':1964,
+'couleur':'grey'}
+
 
 def dicoLoop(h):
         for c in h:
@@ -55,4 +56,20 @@ def checkDico(w):
         else:
                 return False
 
-print(checkDico('chevale'))
+#renvoie dictionnaire inversé
+def invert_dict(d):
+        inverse = {}
+        for key in d:
+                if d[key] not in inverse:
+                        inverse[d[key]] = [key]
+                else:
+                        inverse[d[key]].append(key)
+        return inverse
+
+#version avec setdefault
+def invert_dict2(d):
+        inverse = {}
+        for key in d:
+                inverse.setdefault(d[key],key)
+        return inverse
+
