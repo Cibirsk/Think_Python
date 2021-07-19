@@ -1,4 +1,7 @@
 #compte le nombre de fois qu'une lettre apparait dans 1 string
+from list import has_duplicates
+
+
 def checkString(s):
         listLetters={}
         for c in s:
@@ -14,8 +17,6 @@ myCar={'marque':'aston',
 'année':1964,
 'couleur':'grey'}
 
-myCar['grey'].append('OK')
-print(myCar)
 
 def dicoLoop(h):
         for c in h:
@@ -75,3 +76,22 @@ def invert_dict2(d):
                 inverse.setdefault(d[key],key)
         return inverse
 
+"""
+If you did Exercise 10.7, you already have a function named has_duplicates that
+takes a list as a parameter and returns True if there is any object that appears more than once in the
+list.
+Use a dictionary to write a faster, simpler version of has_duplicates
+"""
+test_list=['lapin','cheval','chien','chat','cheval']
+
+def has_duplicate2(the_liste):
+        tempDic={}
+        for i in the_liste:
+                if i not in tempDic:
+                        tempDic[i]=''
+                else:
+                        return True
+
+        return False
+
+print(has_duplicate2(test_list))
