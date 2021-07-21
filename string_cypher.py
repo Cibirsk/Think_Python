@@ -6,4 +6,4 @@ def rotate_word(s,rot):
 
     return tempS
 
-print(rotate_word('cheer',7))
+print(rotate_word('hal',1))
