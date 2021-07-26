@@ -11,6 +11,7 @@ def rotate_word(s,rot):
 
 def find_rotate():
     fin = open('words2.txt')
+    rotateDico={}
     for i in fin:
-        for j in fin:
             for h in range(26):
+                if 
