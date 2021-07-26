@@ -5,5 +5,3 @@ mouche
 sanglier
 hal
 ibm
-cheer
-jolly

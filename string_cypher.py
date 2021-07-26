@@ -13,5 +13,17 @@ def find_rotate():
     fin = open('words2.txt')
     rotateDico={}
     for i in fin:
+        for j in fin:
             for h in range(26):
-                if 
+                rotWord=rotate_word(j,h)
+                if i.strip() == rotWord:
+                    print('OK')
+
+find_rotate()
+
+#fin=open('words2.txt')
+#for i in fin:
+#    if i.strip() == 'hal':
+#        print('ok')
+#    else:
+#        print('none')
